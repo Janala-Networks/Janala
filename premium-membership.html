@@ -24,7 +24,7 @@
                 <li><a href="index.html#about">About Us</a></li>
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="index.html#regions">Regions</a></li>
-                <li><a href="index.html#career">Career</a></li>
+
                 <li><a href="index.html#contact">Contact</a></li>
                 <li><a href="premium-membership.html" class="nav-btn-premier">Premium Membership</a></li>
             </ul>
@@ -104,9 +104,20 @@
 
                     <div class="registration-actions"
                         style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 20px;">
-                        <a href="https://buy.stripe.com/cNi7sK7iN9XD8X43jMbwk06" class="btn btn-primary btn-payment"
-                            style="width: 100%; max-width: 400px; text-decoration: none; text-align: center; font-size: 1.2rem; padding: 18px;">Proceed
-                            to Payment</a>
+
+                        <!-- Stripe Payment - Credit/Debit Card -->
+                        <a href="https://buy.stripe.com/cNi7sK7iN9XD8X43jMbwk06" target="_blank"
+                            class="btn btn-primary btn-payment"
+                            style="width: 100%; max-width: 400px; text-decoration: none; text-align: center; font-size: 1.2rem; padding: 18px; margin-bottom: 10px;">Pay
+                            by Credit/Debit Card</a>
+
+                        <!-- India UPI Payment - Direct Deep Link -->
+                        <a href="upi://pay?pa=payball.khan-2@oksbi&pn=Janala%20Networks&tn=Premium%20Membership&cu=INR"
+                            class="btn btn-upi btn-payment" style="text-decoration: none;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/UPI-Logo-vector.svg"
+                                alt="UPI Logo">
+                            Pay by India UPI
+                        </a>
 
                         <div class="social-contact-grid"
                             style="width: 100%; max-width: 400px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
