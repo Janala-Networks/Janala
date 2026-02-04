@@ -113,11 +113,80 @@
 
                         <!-- India UPI Payment - Direct Deep Link -->
                         <a href="upi://pay?pa=payball.khan-2@oksbi&pn=Janala%20Networks&tn=Premium%20Membership&cu=INR"
-                            class="btn btn-upi btn-payment" style="text-decoration: none;">
+                            class="btn btn-upi btn-payment" style="text-decoration: none; margin-bottom: 10px;">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/UPI-Logo-vector.svg"
                                 alt="UPI Logo">
                             Pay by India UPI
                         </a>
+
+                        <!-- USDT Payment Button -->
+                        <button id="show-usdt-btn" class="btn btn-usdt btn-payment"
+                            style="width: 100%; max-width: 400px; padding: 18px; font-size: 1.2rem; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px;">
+                            <img src="https://cryptologos.cc/logos/tether-usdt-logo.svg" alt="USDT Logo"
+                                style="height: 24px;">
+                            Pay by USDT
+                        </button>
+
+                        <!-- USDT Payment Info (Hidden by default) -->
+                        <div id="usdt-info" class="payment-info-card"
+                            style="display: none; width: 100%; max-width: 400px; padding: 20px; background: rgba(0, 150, 136, 0.05); border: 2px solid #26a17b; border-radius: 12px; text-align: left; transition: all 0.3s ease;">
+                            <h4 style="color: #26a17b; margin-top: 0; display: flex; align-items: center; gap: 8px;">
+                                <img src="https://cryptologos.cc/logos/tether-usdt-logo.svg" alt="USDT Logo"
+                                    style="height: 20px;">
+                                USDT Payment Details
+                            </h4>
+
+                            <div class="info-group" style="margin-bottom: 15px;">
+                                <label
+                                    style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px;">Binance
+                                    Pay ID</label>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <span
+                                        style="font-family: monospace; font-size: 1.1rem; color: var(--white); font-weight: bold;">1204437878</span>
+                                    <button class="copy-btn" onclick="copyText('1204437878')"
+                                        style="background: none; border: none; color: #26a17b; cursor: pointer; padding: 4px;">Copy</button>
+                                </div>
+                            </div>
+
+                            <div class="info-group" style="margin-bottom: 15px;">
+                                <label
+                                    style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px;">Wallet
+                                    Address (ERC20 Only)</label>
+                                <div style="display: flex; flex-direction: column; gap: 8px;">
+                                    <span
+                                        style="font-family: monospace; font-size: 0.85rem; color: var(--white); word-break: break-all; background: rgba(0,0,0,0.3); padding: 8px; border-radius: 6px;">0x745d13714a0eb8d9f5717c1e5b98901dd5897274</span>
+                                    <button class="copy-btn"
+                                        onclick="copyText('0x745d13714a0eb8d9f5717c1e5b98901dd5897274')"
+                                        style="background: rgba(38, 161, 123, 0.1); border: 1px solid #26a17b; color: #26a17b; cursor: pointer; padding: 6px; border-radius: 4px; width: fit-content;">Copy
+                                        Address</button>
+                                </div>
+                            </div>
+
+                            <div style="text-align: center;">
+                                <img src="assets/usdt_qr_code.png" alt="USDT ERC20 QR Code"
+                                    style="width: 100%; max-width: 250px; border-radius: 10px; margin: 10px 0; border: 5px solid white;">
+                                <p style="font-size: 0.8rem; color: #ffab40; margin-top: 10px;">⚠️ Send ONLY USDT via
+                                    Ethereum (ERC20) network.</p>
+                            </div>
+                        </div>
+
+                        <script>
+                            function copyText(text) {
+                                navigator.clipboard.writeText(text);
+                                alert("Copied to clipboard!");
+                            }
+
+                            document.getElementById('show-usdt-btn').addEventListener('click', function () {
+                                const infoDiv = document.getElementById('usdt-info');
+                                if (infoDiv.style.display === 'none') {
+                                    infoDiv.style.display = 'block';
+                                    this.innerText = 'Close USDT Info';
+                                } else {
+                                    infoDiv.style.display = 'none';
+                                    this.innerHTML = '<img src="https://cryptologos.cc/logos/tether-usdt-logo.svg" alt="USDT Logo" style="height: 24px;"> Pay by USDT';
+                                }
+                            });
+                        </script>
 
                         <div class="social-contact-grid"
                             style="width: 100%; max-width: 400px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">

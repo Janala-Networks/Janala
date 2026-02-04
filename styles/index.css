@@ -718,6 +718,19 @@ h4 {
     letter-spacing: 1px;
 }
 
+.btn-usdt {
+    background: #26a17b;
+    /* USDT Green */
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.btn-usdt:hover {
+    background: #1e8565;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(38, 161, 123, 0.3);
+}
+
 .btn-upi {
     background: #5f259f;
     /* UPI Purple */
